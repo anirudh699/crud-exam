@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block main_block%}
+<div class="container mt-2">
+    <div class="card mx-auto" style="width: 30rem;">
+        <!-- {% if data.picture %}
+            <img src="{{ data.picture.url }}" class="card-img-top" alt="Employee Picture">
+        {% endif %} -->
+        <div class="card-body text-center">
+            
+            <p class="card-text">{{ data.address }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Address: {{ data.Address }}</li>
+            <li class="list-group-item">price: {{ data.price }}</li>
+            <li class="list-group-item">property_type: {{ data.property_type }}</li>
+            <li class="list-group-item">number_of_bedrooms: {{ data.number_of_bedrooms }}</li>
+            <li class="list-group-item">square_footage: {{ data.mobile }}</li>
+            <li class="list-group-item">location: {{data.location}}</li>
+            <li class="list-group-item">property_image: {{data.property_image}}</li>
+            <li class="list-group-item">contact_deatils: {{data.contact_deatils}}</li>
+        </ul>
+        <div class="card-body text-center d-flex justify-content-between">
+            <a href="{% url 'rels-edit' data.id %}" class="card-link btn  btn-primary">Edit</a>
+            <a href="{% url 'rels-list' %}" class="card-link btn  btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>
+
+</div>
+{%endblock%}
