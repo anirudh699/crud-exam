@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('create/',views.RelsCreateView.as_view(),name="rels-add"),
-    path('list/',views.RelsLIStView.as_view(),name="rels-list"),
+    path('',views.RelsLIStView.as_view(),name="rels-list"),
     path('update/<int:pk>/',views.RelsUpdateView.as_view(),name="rels-edit"),
     path('deatil/<int:pk>/',views.RelsDetailVIew.as_view(),name="rels-deatil"),
     path('delete/<int:pk>/',views.RelsDeleteView.as_view(),name="rels-delete"),
